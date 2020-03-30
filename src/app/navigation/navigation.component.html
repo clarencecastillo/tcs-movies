@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" routerLink="/">TCS Cinemas</a>
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/movies" routerLinkActive="active">Movies</a>
+        <a class="nav-item nav-link" routerLink="/cinemas" routerLinkActive="active">Cinemas</a>
+        <a class="nav-item nav-link" routerLink="/reviews" routerLinkActive="active">Reviews</a>
+        <a class="nav-item nav-link" routerLink="/about" routerLinkActive="active">About Us</a>
+    </div>
+    <div class="navbar-nav ml-auto">
+        <li class="nav-item" ngbDropdown>
+            <a class="nav-link" style="cursor: pointer" ngbDropdownToggle role="button">
+                {{user | titlecase}}
+            </a>
+            <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
+                <a ngbDropdownItem (click)="setUser('user')">User</a>
+                <a ngbDropdownItem (click)="setUser('admin')">Admin</a>
+            </div>
+        </li>
+    </div>
+</nav>

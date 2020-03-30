@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <div class="d-flex justify-content-center my-5">
+        <tcs-movie-card [movie]="movie" [style.width]="'40%'" [truncate]="false"></tcs-movie-card>
+        <div class="container-fluid flex-grow-1">
+            <tcs-admin-panel *ngIf="user == 'admin'" [movie]="movie"></tcs-admin-panel>
+            <div class="card">
+                <div class="card-header">
+                    Reviews
+                </div>
+                <div class="card-body">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

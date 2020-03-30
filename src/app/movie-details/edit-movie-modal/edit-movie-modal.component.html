@@ -1,0 +1,26 @@
+<div class="modal-header">
+    <h4 class="modal-title">Edit Movie</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <form [formGroup]="movieForm">
+        <div class="form-group">
+            <label for="title-input">Title</label>
+            <input type="text" class="form-control" id="title-input" formControlName="title">
+        </div>
+        <div class="form-group">
+            <label for="description-input">Description</label>
+            <textarea type="text" class="form-control" id="description-input" formControlName="description"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="year-input">Year</label>
+            <input type="number" class="form-control" id="year-input" formControlName="year">
+        </div>
+    </form>    
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Cancel</button>
+    <button type="button" class="btn btn-primary" (click)="submit()">Submit</button>
+</div>

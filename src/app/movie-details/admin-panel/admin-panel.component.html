@@ -1,0 +1,11 @@
+<div class="card mb-5">
+    <div class="card-header">
+        Admin Panel
+    </div>
+    <div class="card-body">
+        <button *ngIf="movie.featured" class="btn btn-primary mr-2" (click)="hideMovie()">Hide</button>
+        <button *ngIf="!movie.featured" class="btn btn-primary mr-2" (click)="featureMovie()">Feature</button>
+        <button class="btn btn-primary mr-2" (click)="presentEditMovieModal()">Edit</button>
+        <button class="btn btn-danger">Delete</button>
+    </div>
+</div>
